@@ -1,0 +1,158 @@
+/* Main styles for the application */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(to right, #0f0c29, #302b63, #24243e);
+    color: white;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: background-color 0.5s ease;
+}
+
+/* Light mode styling */
+.light-mode {
+    background: linear-gradient(to right, #ffffff, #d7e1ec, #f7f8fa);
+    color: black;
+}
+
+/* Theme switch styles */
+.theme-switch-wrapper {
+    position: fixed;
+    top: 20px;
+    right: 15px;
+}
+
+.theme-switch {
+    display: inline-block;
+    height: 34px;
+    position: relative;
+    width: 60px;
+}
+
+.theme-switch input {
+    display: none;
+}
+
+.slider {
+    background-color: #ccc;
+    bottom: 0;
+    cursor: pointer;
+    left: 0;
+    position: absolute;
+    right: 0;
+    top: 0;
+    transition: .4s;
+}
+
+.slider:before {
+    background-color: #fff;
+    bottom: 4px;
+    content: "";
+    height: 26px;
+    left: 4px;
+    position: absolute;
+    transition: .4s;
+    width: 26px;
+}
+
+input:checked + .slider {
+    background-color: #66bb6a;
+}
+
+input:checked + .slider:before {
+    transform: translateX(26px);
+}
+
+.slider.round {
+    border-radius: 34px;
+}
+
+.slider.round:before {
+    border-radius: 50%;
+}
+
+/* Emoji container styling */
+.emoji-container {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    font-size: 2rem;
+    color: #F57C00; /* Orange color for emoji */
+}
+
+/* Styles for the fixed navigation bar */
+#main-nav {
+    width: 100%;
+    background: inherit;
+    position: fixed;
+    top: 60px; /* Adjusted position to be in the middle of the page */
+    left: 0;
+    z-index: 1000;
+    padding: 1rem; /* Add some padding for spacing */
+}
+
+#main-nav ul {
+    margin: 0;
+    padding: 0;
+}
+
+#main-nav ul li {
+    display: inline-block;
+}
+
+#main-nav ul li a {
+    display: block;
+    padding: 1rem;
+    color: #1976D2; /* Blue color for menu items */
+}
+
+#main-nav ul li a i {
+    margin-right: 8px;
+    color: #F57C00; /* Orange color for emoji icons */
+}
+
+/* Push the main content down to avoid overlap */
+.main-content {
+    padding-top: 100px; /* Adjusted value for desired spacing */
+}
+
+/* Styles for the about section within main-content */
+#about {
+    background-color: rgba(0, 0, 0, 0.8); /* Dark background with some transparency */
+    color: #fff;
+    padding: 2rem;
+    margin: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Shadow effect */
+    transition: background-color 0.5s ease, color 0.5s ease;
+}
+
+#about .container {
+    max-width: 800px;
+    margin: auto;
+    text-align: center;
+}
+
+#about h2 {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: #E6E6E6;
+    margin-bottom: 1rem;
+    text-shadow: 2px 2px 4px #000000;
+}
+
+#about p {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    color: #CCCCCC;
+    text-shadow: 1px 1px 3px #000000;
+}
+
+/* Adjust the background and text color for light mode */
+.light-mode #about {
+    background-color: rgba(255, 255, 255, 0.2); /* Light background with some transparency */
+    color: #333;
+}
