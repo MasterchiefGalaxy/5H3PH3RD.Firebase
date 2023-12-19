@@ -31,6 +31,28 @@
         #main-nav ul li a:hover {
             color: #F57C00; /* Orange color on hover */
         }
+
+        /* Center the content in the container */
+        .container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+        }
+
+        /* Style for blog post */
+        .blog-post {
+            margin-top: 20px; /* Add some margin for spacing */
+        }
+
+        /* Style for the "Read More" button */
+        .mantine-button-container {
+            margin-top: 10px; /* Add margin for spacing */
+        }
+
+        .mantine-button {
+            text-decoration: none;
+        }
     </style>
 </head>
 <body>
@@ -57,13 +79,13 @@
     <div class="main-content">
         <section id="about">
             <div class="container">
-                <h2>Infosec-Insider</h2>
+                <h2>Insider Content</h2>
 
                 <!-- Blog Post 1 -->
                 <div class="blog-post">
                     <h3>Starting Point</h3>
                     <img src="images/Hacker.png" alt="Starting Point Image" class="blog-image-small">
-                    <p>Welcome to the Infosec-Insider blog! This first post is where we get our feet wet. Stay tuned for more exciting content.</p>
+                    <p>If you have ever thought, "Where do I go from here"... Then take a look at these awesome resources!</p>
                     <!-- Link to the individual blog post -->
                     <div class="mantine-button-container">
                         <a href="blog-post-1.html" class="mantine-button">Read More</a>
