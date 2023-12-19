@@ -7,7 +7,7 @@ body {
     color: white;
     height: 100vh;
     display: flex;
-    justify-content: center;
+    flex-direction: column; /* Ensure content flows in a column */
     align-items: center;
     transition: background-color 0.5s ease;
 }
@@ -88,7 +88,7 @@ input:checked + .slider:before {
     width: 100%;
     background: inherit;
     position: fixed;
-    top: 60px; /* Adjusted position to be in the middle of the page */
+    top: 0; /* Adjusted to be at the top of the page */
     left: 0;
     z-index: 1000;
     padding: 1rem; /* Add some padding for spacing */
@@ -116,46 +116,12 @@ input:checked + .slider:before {
 
 /* Push the main content down to avoid overlap */
 .main-content {
-    padding-top: 100px; /* Adjusted value for desired spacing */
+    padding-top: 60px; /* Adjusted value for desired spacing */
+    max-width: 800px; /* Limit the content width */
+    width: 90%; /* Ensure content stays within the screen width */
+    margin: 0 auto; /* Center the content horizontally */
 }
 
-/* Styles for the about section within main-content */
-#about {
-    background-color: rgba(0, 0, 0, 0.8); /* Dark background with some transparency */
-    color: #fff;
-    padding: 2rem;
-    margin: 2rem;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Shadow effect */
-    transition: background-color 0.5s ease, color 0.5s ease;
-}
-
-#about .container {
-    max-width: 800px;
-    margin: auto;
-    text-align: center;
-}
-
-#about h2 {
-    font-size: 2.5rem;
-    font-weight: bold;
-    color: #E6E6E6;
-    margin-bottom: 1rem;
-    text-shadow: 2px 2px 4px #000000;
-}
-
-#about p {
-    font-size: 1.1rem;
-    line-height: 1.6;
-    color: #CCCCCC;
-    text-shadow: 1px 1px 3px #000000;
-}
-
-/* Adjust the background and text color for light mode */
-.light-mode #about {
-    background-color: rgba(255, 255, 255, 0.2); /* Light background with some transparency */
-    color: #333;
-}
 /* Add this CSS to your main.css */
 .blog-image-small {
     max-width: 200px; /* Adjust the width as needed */
