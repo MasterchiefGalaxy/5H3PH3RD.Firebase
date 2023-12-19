@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>5H3PH3RD - Contact</title>
+    <link rel="stylesheet" href="styles/main.css">
+    <!-- Include Font Awesome CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <!-- Include Mantine CSS -->
+    <link
+        rel="stylesheet"
+        href="https://cdn.jsdelivr.net/npm/@mantine/core@2.2.0/dist/mantine.min.css"
+        integrity="sha384-oBu0/ACvmpovzxWNCOFjH5wKr3Y5O43kVnByRGf5z/0xPSIu8nffmE20XFnAht5O"
+        crossorigin="anonymous"
+    >
+    <!-- Custom CSS -->
+    <style>
+        /* Style for the "Contact Me" phrase */
+        #contact h2 {
+            font-size: 2.5rem;
+            font-weight: bold;
+            color: #E6E6E6;
+            margin-bottom: 1rem;
+            text-shadow: 2px 2px 4px #000000;
+            text-align: center;
+        }
+
+        /* Style for the ProtonMail logo */
+        .contact-logo {
+            display: block;
+            margin: 2rem auto;
+            max-width: 150px; /* Adjust the size as needed */
+            cursor: pointer; /* Add a pointer cursor for better UX */
+        }
+    </style>
+</head>
+<body>
+    <!-- Emoji container -->
+    <div class="emoji-container">
+        <span>👨‍💻</span>
+    </div>
+
+    <nav id="main-nav">
+        <ul>
+            <li><a href="index.html"><i class="fas fa-home"></i> Home</a></li>
+            <li><a href="blog.html"><i class="fas fa-user-secret"></i> Blog</a></li>
+            <li><a href="contact.html"><i class="fas fa-desktop"></i> Contact</a></li>
+        </ul>
+    </nav>
+
+    <div class="theme-switch-wrapper">
+        <label class="theme-switch" for="theme-toggle">
+            <input type="checkbox" id="theme-toggle" />
+            <div class="slider round"></div>
+        </label>
+    </div>
+
+    <div class="main-content">
+        <section id="contact">
+            <div class="container">
+                <h2>Contact Me Here</h2>
+                <!-- Emoji pointing down -->
+                <div style="font-size: 2rem; text-align: center;">
+                    <span>👇</span>
+                </div>
+
+                <!-- GitHub Logo Link -->
+                <a href="https://github.com/MasterchiefGalaxy" target="_blank">
+                    <img src="images/github-mark.png" alt="GitHub Logo" class="contact-logo" />
+                </a>
+
+                <!-- ProtonMail Logo Link with mailto prompt -->
+                <a href="mailto:XX5H3PH3RDXX@protonmail.com">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/4/40/Proton_Mail_Logo_01.svg" alt="ProtonMail Logo" class="contact-logo" />
+                </a>
+            </div>
+        </section>
+    </div>
+
+    <script src="dist/app.js"></script>
+</body>
+</html>
