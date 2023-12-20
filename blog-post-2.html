@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>5H3PH3RD - Blog Post 1</title>
+    <link rel="stylesheet" href="styles/main.css">
+    <!-- Include Font Awesome CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <!-- Include Mantine CSS -->
+    <link
+        rel="stylesheet"
+        href="https://cdn.jsdelivr.net/npm/@mantine/core@2.2.0/dist/mantine.min.css"
+        integrity="sha384-oBu0/ACvmpovzxWNCOFjH5wKr3Y5O43kVnByRGf5z/0xPSIu8nffmE20XFnAht5O"
+        crossorigin="anonymous"
+    >
+    <!-- Custom CSS -->
+    <style>
+        /* Reset default margin and padding for the body */
+        body {
+            margin: 0;
+            padding: 0;
+        }
+
+        /* Style for the container */
+        .container {
+            padding: 20px;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        /* Style for headings */
+        h2, h3 {
+            color: #1976D2;
+        }
+
+        /* Style for links */
+        ul li a {
+            color: #F57C00;
+            text-decoration: none;
+        }
+
+        /* Style for emojis */
+        .emoji {
+            font-size: 1.5rem;
+            margin-right: 5px;
+        }
+
+        /* Style for the navigation menu */
+        #main-nav {
+            background-color: #333; /* You can change this background color as needed */
+            position: fixed; /* Fix the menu position */
+            top: 0; /* Align it to the top */
+            left: 0; /* Align it to the left */
+            width: 100%; /* Make it full-width */
+            z-index: 1000; /* Ensure it's on top of other content */
+        }
+
+        #main-nav ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            justify-content: space-around;
+            align-items: center; /* Center the menu vertically */
+        }
+
+        #main-nav ul li {
+            margin: 0;
+            padding: 0;
+        }
+
+        #main-nav ul li a {
+            color: #fff;
+            text-decoration: none;
+        }
+
+        /* Style for the main content */
+        .main-content {
+            padding-top: 60px; /* Add padding-top to create space for the menu */
+        }
+
+        /* Style for the list items */
+        .main-content ul li {
+            margin: 10px 0;
+        }
+    </style>
+</head>
+<body>
+    <!-- Emoji container -->
+    <div class="emoji-container">
+        <span class="emoji">👨‍💻</span>
+    </div>
+
+    <nav id="main-nav">
+        <ul>
+            <li><a href="index.html"><i class="fas fa-home"></i> Home</a></li>
+            <li><a href="blog.html"><i class="fas fa-user-secret"></i> Blog</a></li>
+            <li><a href="contact.html"><i class="fas fa-desktop"></i> Contact</a></li>
+        </ul>
+    </nav>
+
+    <div class="theme-switch-wrapper">
+        <label class="theme-switch" for="theme-toggle">
+            <input type="checkbox" id="theme-toggle" />
+            <div class="slider round"></div>
+        </label>
+    </div>
+
+    <div class="main-content">
+        <section id="blog-post">
+            <div class="container">
+                <h2>Sometimes tools just simply do not work. <span class="emoji">👩‍💻</span></h2>
+
+                <!-- Add your content here -->
+                <h3>The low down</h3>
+                <ul>
+
+
+                <p>So from the time I started dabbling in the world of hacking, the first thing I noticed is that the plethora of tools available is almost daunting. 🚀</p>
+                <p>It is easy to feel like a kid in a candy store with all these pentesting/hacking tools at your disposal. From Nmap to Metasploit, the list is endless..</p>
+
+                <p>But here's the real tea: a lot of these tools just don't cut it. 🛠️❌ Recently while conducting an external test, I ran to the one of the most widely used password spraying tools around and right as I ran my first command something just didn't feel right.....because, well... the tool wasn't actually doing anything! After diving in I realized that the tool was no longer being maintained and was now dead in the water... Welcome to the ever changing world of pentesting..</p>
+
+                <p>I digress... </p>
+
+                <p>Let's break it down. We're in an era where new vulnerabilities pop up like whack-a-moles. It's tempting to rely on a pre-built tool to do the job. Easy, right? But here's the catch – not all tools are created equal. Some are outdated, others are as reliable as a chocolate teapot. 🍫☕
+
+                    So, what’s a cyber sleuth to do? The answer: Get your hands dirty. 🧤💻
+                    
+                    Sometimes the tool you need doesn’t exist yet, and that’s your cue to create it. Building your own tools can be a game-changer. It’s not just about having the right hammer; it’s about forging it yourself. 🔨✨
+                    . 🚀</p>
+
+                <p> Remember, pentesting isn't just about running tools; it's about understanding the why and the how. It’s about thinking like an attacker and a defender. You need to be agile, creative, and sometimes a bit crafty. 🕵️‍♂️🛡️and even if you aren't some super high speed developer, fear not... because we also have something called chatGPT now and you should be leveraging it when possible.:</p>
+
+                <p>For example lets take a look at this prompt and the output given by chatGPT</p>
+
+                <p>My prompt: ""So I am pen testing a client's web application. The application appears to have an azure key vault secret hard coded into the source code. Give me a script to access the secret key content."</p>
+
+                <p>Take a look at the response:👇</p>
+
+            
+                <img src="images/chatGPTcode.png" alt="Coding Image" class="blog-image-large">
+
+                <p>We will dive into the weeds of AI and all the chatGPT goodness very soon, the point is that there may be a time when a widely used, respected and familiar tool may fail and then you have to roll up your sleeves and make something happen 👊</p>
+            </div>
+        </section>
+    </div>
+
+    <!-- ... (rest of your body content) ... -->
+</body>
+</html>
