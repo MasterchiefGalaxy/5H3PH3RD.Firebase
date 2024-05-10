@@ -4,26 +4,78 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>5H3PH3RD - Blog Post 2</title>
-    <link rel="stylesheet" href="styles/main.css">
-    <!-- Include Font Awesome CSS -->
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
+    <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
-    <!-- Include Mantine CSS -->
-    <link
-        rel="stylesheet"
-        href="https://cdn.jsdelivr.net/npm/@mantine/core@2.2.0/dist/mantine.min.css"
-        integrity="sha384-oBu0/ACvmpovzxWNCOFjH5wKr3Y5O43kVnByRGf5z/0xPSIu8nffmE20XFnAht5O"
-        crossorigin="anonymous"
-    >
-    <!-- Custom CSS -->
+    <!-- Custom Styles -->
     <style>
-        /* CSS content remains unchanged */
+        body {
+            font-family: 'Poppins', sans-serif;
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(to right bottom, #4a148c, #6a1b9a);
+            color: #ffffff;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            min-height: 100vh;
+        }
+        #main-nav ul {
+            list-style-type: none;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            background: rgba(0, 0, 0, 0.2);
+            border-radius: 20px;
+            margin-top: 20px;
+        }
+        #main-nav ul li a {
+            color: #ffffff;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 16px;
+            padding: 8px 16px;
+            transition: color 0.3s ease;
+        }
+        #main-nav ul li a:hover, #main-nav ul li a:focus {
+            color: #FFD54F; /* Yellow color on hover */
+        }
+        .container {
+            max-width: 960px;
+            margin: 20px;
+            padding: 20px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 15px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            text-align: left;
+        }
+        h2, h3 {
+            color: #FFD54F; /* Consistent header colors */
+        }
+        ul {
+            padding-left: 20px;
+        }
+        ul li {
+            margin-bottom: 10px; /* Add spacing between list items */
+        }
+        ul li strong {
+            color: #FFD54F; /* Highlight key terms */
+        }
+        p {
+            line-height: 1.6; /* Improve readability */
+        }
+        .emoji {
+            font-size: 1.5rem; /* Emoji styles */
+        }
+        .theme-switch-wrapper {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+        }
     </style>
 </head>
 <body>
-    <div class="emoji-container">
-        <span class="emoji">🔧</span>
-    </div>
-
     <nav id="main-nav">
         <ul>
             <li><a href="index.html"><i class="fas fa-home"></i> Home</a></li>
@@ -31,6 +83,10 @@
             <li><a href="contact.html"><i class="fas fa-desktop"></i> Contact</a></li>
         </ul>
     </nav>
+
+    <div class="emoji-container">
+        <span class="emoji">🔧</span>
+    </div>
 
     <div class="theme-switch-wrapper">
         <label class="theme-switch" for="theme-toggle">
@@ -64,6 +120,5 @@
             </div>
         </section>
     </div>
-    <!-- ... (rest of your body content) ... -->
 </body>
 </html>

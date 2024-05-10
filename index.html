@@ -11,55 +11,79 @@
     img-src 'self' data:;
     connect-src 'self';
     frame-src 'none';
-">
-
+    ">
     <title>5H3PH3RD</title>
     <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
-    
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
-
-    <!-- Main CSS -->
-    <link rel="stylesheet" href="styles/main.css">
     <!-- Custom CSS -->
     <style>
-           h2 {
-        color: #1976D2; /* Same blue color as your menu items */
-    }
-        /* Style for navigation links */
-        #main-nav ul li a {
-            display: block;
-            padding: 1rem;
-            color: #1976D2; /* Blue color for menu items */
-            text-align: center;
-            text-decoration: none;
-            font-weight: bold;
-            font-size: 1.2rem;
-            transition: color 0.3s ease;
-        }
-
-        #main-nav ul li a:hover {
-            color: #F57C00; /* Orange color on hover */
-        }
-
-        /* Center the content in the container */
-        .container {
+        body {
+            font-family: 'Poppins', sans-serif;
+            margin: 0;
+            padding: 0;
+            background: #121212; /* Dark background for contrast */
+            color: #ffffff; /* White text color for readability */
             display: flex;
             flex-direction: column;
             align-items: center;
-            text-align: center;
+            justify-content: center;
+            min-height: 100vh;
+            background-image: linear-gradient(to right bottom, #4a148c, #6a1b9a);
         }
-
-        /* Style for the GitHub link */
-        .github-link {
-            margin-top: 20px; /* Add some margin for spacing */
+        #main-nav ul {
+            list-style-type: none;
+            padding: 0;
+            display: flex;
+            background: rgba(0, 0, 0, 0.2);
+            padding: 10px 20px;
+            border-radius: 20px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
         }
-
-        .github-link a {
+        #main-nav ul li a {
+            color: #ffffff;
             text-decoration: none;
+            font-weight: bold;
+            font-size: 16px;
+            padding: 8px 16px;
+            transition: color 0.3s ease, transform 0.3s ease;
         }
-        
+        #main-nav ul li a:hover, #main-nav ul li a:focus {
+            color: #FFD54F; /* Yellow color on hover */
+            transform: translateY(-2px);
+        }
+        .container {
+            text-align: center;
+            padding: 20px;
+            max-width: 600px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 15px;
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+        }
+        h2 {
+            font-size: 2.5rem;
+            color: #FFD54F; /* Stylish yellow for headers */
+        }
+        p {
+            line-height: 1.6;
+            color: #BDBDBD; /* Light grey for paragraphs */
+        }
+        .github-link img {
+            height: 48px; /* Larger GitHub logo */
+            transition: transform 0.3s ease;
+        }
+        .github-link img:hover {
+            transform: scale(1.1);
+        }
+        .theme-switch-wrapper {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+        }
+        .slider.round {
+            background-color: #FFF176; /* Light yellow slider */
+        }
     </style>
 </head>
 <body>
@@ -70,35 +94,29 @@
             <li><a href="contact.html"><i class="fas fa-desktop"></i> Contact</a></li>
         </ul>
     </nav>
-
     <div class="emoji-container">
-        <span>👨‍💻</span> <!-- Hacker emoji at the top -->
+        <span style="font-size: 3rem;">👨‍💻</span> <!-- Hacker emoji -->
     </div>
-
     <div class="theme-switch-wrapper">
         <label class="theme-switch" for="theme-toggle">
-            <input type="checkbox" id="theme-toggle" />
             <div class="slider round"></div>
         </label>
     </div>
-
     <div class="main-content">
         <section id="about">
             <div class="container">
                 <h2>Welcome to Infosec-Insider!</h2>
                 <p>I'm 5H3PH3RD💻, a cyber security professional with a passion for creating, learning, building, and breaking things in the digital realm. From tools🛠, CTFs🚩, and hacker news📰, we will talk about it here.</p>
-                <p class="coffee-invite">Take a look around and feel free to get in touch!</p> <span>👇</span>
-
+                <p class="coffee-invite">Take a look around and feel free to get in touch!</p>
                 <!-- GitHub Link -->
                 <div class="github-link">
                     <a href="https://github.com/MasterchiefGalaxy" target="_blank" title="Check out my GitHub">
-                        <img src="images/github-mark.png" alt="GitHub Logo" />
+                        <img src="images/github-mark.png" alt="GitHub Logo">
                     </a>
                 </div>
             </div>
         </section>
     </div>
-
     <!-- JavaScript File -->
     <script src="dist/app.js"></script>
 </body>

@@ -4,98 +4,95 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>5H3PH3RD - Blog</title>
-    <link rel="stylesheet" href="styles/main.css">
-    <!-- Include Font Awesome CSS -->
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
+    <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
-    <!-- Include Mantine CSS -->
-    <link
-        rel="stylesheet"
-        href="https://cdn.jsdelivr.net/npm/@mantine/core@2.2.0/dist/mantine.min.css"
-        integrity="sha384-oBu0/ACvmpovzxWNCOFjH5wKr3Y5O43kVnByRGf5z/0xPSIu8nffmE20XFnAht5O"
-        crossorigin="anonymous"
-    >
-    <!-- Custom CSS -->
+    <!-- Custom Styles -->
     <style>
-        /* Style for navigation links */
+        body {
+            font-family: 'Poppins', sans-serif;
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(to right bottom, #4a148c, #6a1b9a);
+            color: #fff;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            min-height: 100vh;
+        }
+        #main-nav ul {
+            list-style-type: none;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            background: rgba(0, 0, 0, 0.2);
+            border-radius: 20px;
+            margin-top: 20px;
+        }
         #main-nav ul li a {
-            display: block;
-            padding: 1rem;
-            color: #1976D2; /* Blue color for menu items */
-            text-align: center;
+            color: #ffffff;
             text-decoration: none;
             font-weight: bold;
-            font-size: 1.2rem;
+            font-size: 16px;
+            padding: 8px 16px;
             transition: color 0.3s ease;
         }
-
-        #main-nav ul li a:hover {
-            color: #F57C00; /* Orange color on hover */
+        #main-nav ul li a:hover, #main-nav ul li a:focus {
+            color: #FFD54F; /* Yellow color on hover */
         }
-        h2 {
-            color: #1976D2; /* Same blue color as your menu items */
-            text-align: center; /* Center the "Blog Room" text */
-        }
-
-        /* Grid layout for container */
         .container {
-            display: grid;
-            grid-template-columns: repeat(2, 1fr); /* Two columns */
-            gap: 20px;
-            align-items: start;
-        }
-
-        /* Style for blog post */
-        .blog-post {
-            background: #000; /* Black background */
-            color: #fff; /* White text color */
-            border-radius: 10px; /* Rounded corners */
+            max-width: 960px;
+            margin: 20px;
             padding: 20px;
-            box-shadow: 0px 2px 5px rgba(0,0,0,0.1);
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 15px;
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            gap: 20px;
         }
-
-        /* Adjust image styles */
+        .blog-post {
+            background: rgba(0, 0, 0, 0.3);
+            border-radius: 10px;
+            padding: 20px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
+        }
+        .blog-post:hover {
+            transform: translateY(-5px);
+        }
         .blog-image-small {
             max-width: 100%;
-            height: auto;
             border-radius: 5px;
         }
-
-        /* Style for the "Read More" button */
         .mantine-button-container {
             margin-top: 10px;
         }
-
         .mantine-button {
+            background: #FFD54F;
+            color: #000;
             text-decoration: none;
-            color: #1976D2;
+            padding: 8px 16px;
+            border-radius: 5px;
+            display: inline-block;
+        }
+        .mantine-button:hover {
+            background: #ffb300;
         }
     </style>
 </head>
 <body>
-    <!-- Emoji container -->
-    <div class="emoji-container">
-        <span>👨‍💻</span>
-    </div>
-
     <nav id="main-nav">
         <ul>
             <li><a href="index.html"><i class="fas fa-home"></i> Home</a></li>
-            <li><a href="blog.html"><i class="fas fa-user-secret"></i> Blog</a></li>
+            <li><a href="blog.html" class="active"><i class="fas fa-user-secret"></i> Blog</a></li>
             <li><a href="contact.html"><i class="fas fa-desktop"></i> Contact</a></li>
         </ul>
     </nav>
 
-    <div class="theme-switch-wrapper">
-        <label class="theme-switch" for="theme-toggle">
-            <input type="checkbox" id="theme-toggle" />
-            <div class="slider round"></div>
-        </label>
-    </div>
-
     <div class="main-content">
         <section id="about">
             <div class="container">
-                
                 <!-- Blog Post 1 -->
                 <div class="blog-post">
                     <h3>Starting Point</h3>
@@ -105,7 +102,6 @@
                         <a href="blog-post-1.html" class="mantine-button">Read More</a>
                     </div>
                 </div>
-
                 <!-- Blog Post 2 -->
                 <div class="blog-post">
                     <h3>More tools more problems</h3>
@@ -115,7 +111,6 @@
                         <a href="blog-post-2.html" class="mantine-button">Read More</a>
                     </div>
                 </div>
-
                 <!-- Blog Post 3 -->
                 <div class="blog-post">
                     <h3>Taking the Ejpt</h3>
@@ -125,9 +120,7 @@
                         <a href="blog-post-3.html" class="mantine-button">Read More</a>
                     </div>
                 </div>
-
                 <!-- Add more blog posts here -->
-
             </div>
         </section>
     </div>

@@ -4,70 +4,84 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>5H3PH3RD - Contact</title>
-    <link rel="stylesheet" href="styles/main.css">
-    <!-- Include Font Awesome CSS -->
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
+    <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
-    <!-- Include Mantine CSS -->
-    <link
-        rel="stylesheet"
-        href="https://cdn.jsdelivr.net/npm/@mantine/core@2.2.0/dist/mantine.min.css"
-        integrity="sha384-oBu0/ACvmpovzxWNCOFjH5wKr3Y5O43kVnByRGf5z/0xPSIu8nffmE20XFnAht5O"
-        crossorigin="anonymous"
-    >
-    <!-- Custom CSS -->
+    <!-- Custom Styles -->
     <style>
-        /* Style for the "Contact Me" phrase */
-        #contact h2 {
-            font-size: 2.5rem;
-            font-weight: bold;
-            color: #E6E6E6;
-            margin-bottom: 1rem;
-            text-shadow: 2px 2px 4px #000000;
-            text-align: center;
+        body {
+            font-family: 'Poppins', sans-serif;
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(to right bottom, #4a148c, #6a1b9a);
+            color: #ffffff;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            min-height: 100vh;
         }
-
-        /* Style for the ProtonMail logo */
-        .contact-logo {
-            display: block;
-            margin: 2rem auto;
-            max-width: 150px; /* Adjust the size as needed */
-            cursor: pointer; /* Add a pointer cursor for better UX */
+        #main-nav ul {
+            list-style-type: none;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            background: rgba(0, 0, 0, 0.2);
+            border-radius: 20px;
+            margin-top: 20px;
         }
-
-        /* Style for navigation links */
         #main-nav ul li a {
-            display: block;
-            padding: 1rem;
-            color: #1976D2; /* Blue color for menu items */
-            text-align: center;
+            color: #ffffff;
             text-decoration: none;
             font-weight: bold;
-            font-size: 1.2rem;
+            font-size: 16px;
+            padding: 8px 16px;
             transition: color 0.3s ease;
         }
-
-        #main-nav ul li a:hover {
-            color: #F57C00; /* Orange color on hover */
+        #main-nav ul li a:hover, #main-nav ul li a:focus {
+            color: #FFD54F; /* Yellow color on hover */
+        }
+        .container {
+            max-width: 960px;
+            margin: 20px;
+            padding: 20px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 15px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+        h2 {
+            color: #FFD54F; /* Header color */
+            font-size: 2.5rem;
+        }
+        .contact-logo {
+            margin-top: 20px;
+            width: 150px; /* Uniform size for logos */
+            cursor: pointer;
+        }
+        .theme-switch-wrapper {
+            position: absolute;
+            top: 20px;
+            right: 20px;
         }
     </style>
 </head>
 <body>
-    <!-- Emoji container -->
-    <div class="emoji-container">
-        <span>👨‍💻</span>
-    </div>
-
     <nav id="main-nav">
         <ul>
             <li><a href="index.html"><i class="fas fa-home"></i> Home</a></li>
             <li><a href="blog.html"><i class="fas fa-user-secret"></i> Blog</a></li>
-            <li><a href="contact.html"><i class="fas fa-desktop"></i> Contact</a></li>
+            <li><a href="contact.html" class="active"><i class="fas fa-desktop"></i> Contact</a></li>
         </ul>
     </nav>
 
+    <div class="emoji-container">
+        
+    </div>
+
     <div class="theme-switch-wrapper">
         <label class="theme-switch" for="theme-toggle">
-            <input type="checkbox" id="theme-toggle" />
+            
             <div class="slider round"></div>
         </label>
     </div>
@@ -76,21 +90,12 @@
         <section id="contact">
             <div class="container">
                 <h2>Contact Me Here</h2>
-                <!-- Emoji pointing down -->
-                <div style="font-size: 2rem; text-align: center;">
-                    <span>👇</span>
-                </div>
-
-                <!-- GitHub Logo Link -->
+                <span style="font-size: 5rem;">👉</span>
                 <a href="https://github.com/MasterchiefGalaxy" target="_blank">
                     <img src="images/github-mark.png" alt="GitHub Logo" class="contact-logo" />
                 </a>
-
-                <!-- ProtonMail Logo Link with mailto prompt -->
                 <a href="mailto:XX5H3PH3RDXX@protonmail.com">
                     <img src="https://upload.wikimedia.org/wikipedia/commons/4/40/Proton_Mail_Logo_01.svg" alt="ProtonMail Logo" class="contact-logo" />
-                </a>
-
                 </a>
             </div>
         </section>

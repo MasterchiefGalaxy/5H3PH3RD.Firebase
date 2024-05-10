@@ -4,105 +4,82 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>5H3PH3RD - Blog Post 1</title>
-    <link rel="stylesheet" href="styles/main.css">
-    <!-- Include Font Awesome CSS -->
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
+    <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
-    <!-- Include Mantine CSS -->
-    <link
-        rel="stylesheet"
-        href="https://cdn.jsdelivr.net/npm/@mantine/core@2.2.0/dist/mantine.min.css"
-        integrity="sha384-oBu0/ACvmpovzxWNCOFjH5wKr3Y5O43kVnByRGf5z/0xPSIu8nffmE20XFnAht5O"
-        crossorigin="anonymous"
-    >
-    <!-- Custom CSS -->
+    <!-- Custom Styles -->
     <style>
-        /* Reset default margin and padding for the body */
         body {
+            font-family: 'Poppins', sans-serif;
             margin: 0;
             padding: 0;
-        }
-
-        /* Style for the container */
-        .container {
-            padding: 20px;
-            max-width: 800px;
-            margin: 0 auto;
-        }
-
-        /* Style for headings */
-        h2, h3 {
-            color: #1976D2;
-        }
-
-        /* Style for links */
-        ul li a {
-            color: #F57C00;
-            text-decoration: none;
-        }
-
-        /* Style for emojis */
-        .emoji {
-            font-size: 1.5rem;
-            margin-right: 5px;
-        }
-
-        /* Style for the navigation menu */
-        #main-nav {
-            background-color: #333; /* You can change this background color as needed */
-            position: fixed; /* Fix the menu position */
-            top: 0; /* Align it to the top */
-            left: 0; /* Align it to the left */
-            width: 100%; /* Make it full-width */
-            z-index: 1000; /* Ensure it's on top of other content */
-        }
-
-        #main-nav ul {
-            list-style: none;
-            padding: 0;
-            margin: 0;
+            background: linear-gradient(to right bottom, #4a148c, #6a1b9a);
+            color: #ffffff;
             display: flex;
-            justify-content: space-around;
-            align-items: center; /* Center the menu vertically */
+            flex-direction: column;
+            align-items: center;
+            min-height: 100vh;
         }
-
-        #main-nav ul li {
-            margin: 0;
+        #main-nav ul {
+            list-style-type: none;
             padding: 0;
+            display: flex;
+            justify-content: center;
+            background: rgba(0, 0, 0, 0.2);
+            border-radius: 20px;
+            margin-top: 20px;
         }
-
         #main-nav ul li a {
-            color: #fff;
+            color: #ffffff;
             text-decoration: none;
+            font-weight: bold;
+            font-size: 16px;
+            padding: 8px 16px;
+            transition: color 0.3s ease;
         }
-
-        /* Style for the main content */
-        .main-content {
-            padding-top: 60px; /* Add padding-top to create space for the menu */
+        #main-nav ul li a:hover, #main-nav ul li a:focus {
+            color: #FFD54F; /* Yellow color on hover */
         }
-
-        /* Style for the list items */
-        .main-content ul li {
-            margin: 10px 0;
+        .container {
+            max-width: 960px;
+            margin: 20px;
+            padding: 20px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 15px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            text-align: left;
+        }
+        h2, h3 {
+            color: #FFD54F; /* Consistent header colors */
+        }
+        ul {
+            padding-left: 20px;
+        }
+        ul li a {
+            color: #FFD54F; /* Links color */
+            transition: color 0.3s ease;
+        }
+        ul li a:hover {
+            color: #B39DDB; /* Light purple on hover */
+        }
+        .emoji {
+            font-size: 1.5rem; /* Emoji styles */
         }
     </style>
 </head>
 <body>
-    <!-- Emoji container -->
-    <div class="emoji-container">
-        <span class="emoji">👨‍💻</span>
-    </div>
-
     <nav id="main-nav">
         <ul>
             <li><a href="index.html"><i class="fas fa-home"></i> Home</a></li>
-            <li><a href="blog.html"><i class="fas fa-user-secret"></i> Blog</a></li>
+            <li><a href="blog.html" class="active"><i class="fas fa-user-secret"></i> Blog</a></li>
             <li><a href="contact.html"><i class="fas fa-desktop"></i> Contact</a></li>
         </ul>
     </nav>
 
     <div class="theme-switch-wrapper">
         <label class="theme-switch" for="theme-toggle">
-            <input type="checkbox" id="theme-toggle" />
+            
             <div class="slider round"></div>
         </label>
     </div>
@@ -112,62 +89,52 @@
             <div class="container">
                 <h2>Below are links to some of the best content around the web! <span class="emoji">🌐</span></h2>
 
-                <!-- Add your content here -->
                 <h3>YouTube Channels Worth Following</h3>
                 <ul>
                     <li><a href="https://www.youtube.com/@ItproTv" target="_blank">ItproTv</a> - One of the best resources for learning, hands down! 📺</li>
                     <li><a href="https://www.youtube.com/@davidbombal" target="_blank">David Bombal</a> - Awesome for tidbits of information, he makes security fun. 🎉</li>
-                    <li><a href="https://www.youtube.com/@NetworkChuck" target="_blank">NetworkChuck</a>: Ideal for those who prefer their learning in vibrant, energetic bursts. <span class="emoji">🌟</span></li>
-                    <li><a href="https://www.youtube.com/@LoiLiangYang" target="_blank">Loi Liang Yang</a>: Theatrical content, and you'll find complex exploits simplified for the everyday user. <span class="emoji">🎭</span></li>
-                    <li><a href="https://www.youtube.com/@AlexChaveriat" target="_blank">Alex Chaveriat</a>: Stay up-to-date with the latest in the hacking universe, from AI to security conferences. <span class="emoji">📰</span></li>
-                    <li><a href="https://www.youtube.com/@jhaddix" target="_blank">Jhaddix</a>: Follow the journey of a seasoned bug bounty hunter and get a peek at his toolbox. <span class="emoji">🧰</span></li>
-                    <li><a href="https://www.youtube.com/@STOKfredrik" target="_blank">STOKfredrik</a>: Real-world bug bounty experiences from someone in the trenches. <span class="emoji">💼</span></li>
-                    <li><a href="https://www.youtube.com/@_JohnHammond" target="_blank">John Hammond</a>: A wealth of information on all things security that you can't afford to miss. <span class="emoji">🛡️</span></li>
-                    <!-- Add more YouTube channels as needed -->
+                    <li><a href="https://www.youtube.com/@NetworkChuck" target="_blank">NetworkChuck</a>: Ideal for those who prefer their learning in vibrant, energetic bursts. 🌟</li>
+                    <li><a href="https://www.youtube.com/@LoiLiangYang" target="_blank">Loi Liang Yang</a>: Theatrical content, and you'll find complex exploits simplified for the everyday user. 🎭</li>
+                    <li><a href="https://www.youtube.com/@AlexChaveriat" target="_blank">Alex Chaveriat</a>: Stay up-to-date with the latest in the hacking universe, from AI to security conferences. 📰</li>
+                    <li><a href="https://www.youtube.com/@jhaddix" target="_blank">Jhaddix</a>: Follow the journey of a seasoned bug bounty hunter and get a peek at his toolbox. 🧰</li>
+                    <li><a href="https://www.youtube.com/@STOKfredrik" target="_blank">STOKfredrik</a>: Real-world bug bounty experiences from someone in the trenches. 💼</li>
+                    <li><a href="https://www.youtube.com/@_JohnHammond" target="_blank">John Hammond</a>: A wealth of information on all things security that you can't afford to miss. 🛡️</li>
                 </ul>
 
                 <h3>Websites that are Great for Hands-On Hacking</h3>
                 <ul>
                     <li><a href="https://tryhackme.com/dashboard" target="_blank">TryHackMe</a> - Great for beginners and for learning about certain tools. 🔐</li>
                     <li><a href="https://www.hackthebox.com/" target="_blank">Hack The Box</a> - Awesome once you have a little experience and have spent some time on TryHackMe. 🌐</li>
-                    <li><a href="https://www.hackthissite.org/" target="_blank">Hack This Site</a>: An oldie but goodie that offers a playful approach, especially the web app testing section. <span class="emoji">🎮</span></li>
-                    <li><a href="https://owasp.org/www-project-juice-shop/" target="_blank">OWASP Juice Shop</a>: Load this into a VM and get down to business with a vulnerable web app for practical, hands-on experience. <span class="emoji">🍹</span></li>
-                    <li><a href="https://www.vulnhub.com/" target="_blank">VulnHub</a>: Dive into a plethora of vulnerable machines, all ready for your penetration testing skills. <span class="emoji">💻</span></li>
-                </ul>
-                    <!-- Add more websites as needed -->
+                    <li><a href="https://www.hackthissite.org/" target="_blank">Hack This Site</a>: An oldie but goodie that offers a playful approach, especially the web app testing section. 🎮</li>
+                    <li><a href="https://owasp.org/www-project-juice-shop/" target="_blank">OWASP Juice Shop</a>: Load this into a VM and get down to business with a vulnerable web app for practical, hands-on experience. 🍹</li>
+                    <li><a href="https://www.vulnhub.com/" target="_blank">VulnHub</a>: Dive into a plethora of vulnerable machines, all ready for your penetration testing skills. 💻</li>
                 </ul>
 
                 <h3>Distros for Learning How to Hack</h3>
                 <ul>
                     <li><a href="https://www.kali.org/" target="_blank">Kali Linux</a> - The Swiss Army knife for any budding hacker. 🔪</li>
                     <li><a href="https://www.parrotsec.org/" target="_blank">Parrot Security</a> - A polished, full-featured toolkit for security and development. 🦜</li>
-                    <!-- Add more distros as needed -->
                 </ul>
 
                 <h3>Cool Online Tools for Hacking</h3>
                 <ul>
                     <li><a href="https://gtfobins.github.io/" target="_blank">GTFOBins</a> - A curated list of Unix binaries that can be exploited to bypass system security restrictions. 📦</li>
                     <li><a href="https://www.revshells.com/" target="_blank">Reverse Shell Generator</a> - Never get stuck crafting a reverse shell command again. 🔄</li>
-                    <li><a href="https://gchq.github.io/CyberChef/" target="_blank">CyberChef</a>: The ultimate tool for encryption, encoding, compression, and data analysis. <span class="emoji">🍳</span></li>
-                    <li><a href="https://chat.openai.com/" target="_blank">OpenAI Chat</a>: Engage with an AI for insights and information across a spectrum of topics. <span class="emoji">🤖</span></li>
-                </ul>
-                    <!-- Add more online tools as needed -->
+                    <li><a href="https://gchq.github.io/CyberChef/" target="_blank">CyberChef</a>: The ultimate tool for encryption, encoding, compression, and data analysis. 🍳</li>
+                    <li><a href="https://chat.openai.com/" target="_blank">OpenAI Chat</a>: Engage with an AI for insights and information across a spectrum of topics. 🤖</li>
                 </ul>
 
                 <h3>Platforms to Test Your Bug Bounty Skills</h3>
                 <ul>
                     <li><a href="https://www.hackerone.com/" target="_blank">HackerOne</a> - A leading bug bounty platform connecting businesses with penetration testers and cybersecurity researchers. 🐛</li>
                     <li><a href="https://www.bugcrowd.com/" target="_blank">Bugcrowd</a> - Crowdsource your security with a community of trusted hackers. 🐦</li>
-                    <!-- Add more bug bounty platforms as needed -->
                 </ul>
 
-                <p>In the vast sea of cybersecurity resources, it's easy to get lost. The platforms and channels I've curated for you stand out for their quality content and the value they offer. These resources should keep you busy and productive as you embark on or continue your hacking journey. 🌊</p>
+                <p>In the vast sea of cybersecurity resources, it's easy to get lost. These platforms and channels stand out for their quality content and value they offer, ensuring you stay busy and productive as you embark on or continue your hacking journey. 🌊</p>
 
-                <p>Remember, the learning path in cybersecurity is what you make of it. It is neither short nor easy, but with the right resources and a dedication to continual learning, you'll find yourself making headway in no time. 🚀</p>
+                <p>Remember, the path to learning cybersecurity is neither short nor easy, but with the right resources and dedication to continual learning, you'll make significant headway. 🚀</p>
             </div>
         </section>
     </div>
-
-    <!-- ... (rest of your body content) ... -->
 </body>
 </html>

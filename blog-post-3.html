@@ -4,103 +4,74 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>5H3PH3RD - Blog Post 3</title>
-    <link rel="stylesheet" href="styles/main.css">
-    <!-- Include Font Awesome CSS -->
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
+    <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
-    <!-- Include Mantine CSS -->
-    <link
-        rel="stylesheet"
-        href="https://cdn.jsdelivr.net/npm/@mantine/core@2.2.0/dist/mantine.min.css"
-        integrity="sha384-oBu0/ACvmpovzxWNCOFjH5wKr3Y5O43kVnByRGf5z/0xPSIu8nffmE20XFnAht5O"
-        crossorigin="anonymous"
-    >
-    <!-- Custom CSS -->
+    <!-- Custom Styles -->
     <style>
-        /* Reset default margin and padding for the body */
         body {
+            font-family: 'Poppins', sans-serif;
             margin: 0;
             padding: 0;
-            font-family: Arial, sans-serif; /* Use a more readable font on mobile devices */
-            background-color: #f0f0f0; /* Light gray background */
-            text-align: center; /* Center-align all text within the body */
-        }
-
-        /* Style for the container */
-        .container {
-            padding: 10px; /* Reduce padding on smaller screens */
-            max-width: 800px;
-            margin: 0 auto;
-        }
-
-        /* Style for headings */
-        h2, h3 {
-            color: #1976D2;
-        }
-
-        /* Style for links */
-        ul li a {
-            color: #F57C00;
-            text-decoration: none;
-        }
-
-        /* Style for emojis */
-        .emoji {
-            font-size: 1.5rem;
-            margin-right: 5px;
-        }
-
-        /* Style for the navigation menu */
-        #main-nav {
-            background-color: #333; /* You can change this background color as needed */
-            position: fixed; /* Fix the menu position */
-            top: 0; /* Align it to the top */
-            left: 0; /* Align it to the left */
-            width: 100%; /* Make it full-width */
-            z-index: 1000; /* Ensure it's on top of other content */
-        }
-
-        #main-nav ul {
-            list-style: none;
-            padding: 0;
-            margin: 0;
+            background: linear-gradient(to right bottom, #4a148c, #6a1b9a);
+            color: #ffffff;
             display: flex;
-            justify-content: space-around;
-            align-items: center; /* Center the menu vertically */
+            flex-direction: column;
+            align-items: center;
+            min-height: 100vh;
         }
-
-        #main-nav ul li {
-            margin: 0;
+        #main-nav ul {
+            list-style-type: none;
             padding: 0;
+            display: flex;
+            justify-content: center;
+            background: rgba(0, 0, 0, 0.2);
+            border-radius: 20px;
+            margin-top: 20px;
         }
-
         #main-nav ul li a {
-            color: #fff;
+            color: #ffffff;
             text-decoration: none;
+            font-weight: bold;
+            font-size: 16px;
+            padding: 8px 16px;
+            transition: color 0.3s ease;
         }
-
-        /* Style for the main content */
-        .main-content {
-            padding-top: 60px; /* Add padding-top to create space for the menu */
+        #main-nav ul li a:hover, #main-nav ul li a:focus {
+            color: #FFD54F; /* Yellow color on hover */
         }
-
-        /* Style for the list items */
-        .main-content ul li {
-            margin: 10px 0;
+        .container {
+            max-width: 960px;
+            margin: 20px;
+            padding: 20px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 15px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            text-align: left;
         }
-
-        /* Responsive adjustments for images */
+        h2, h3 {
+            color: #FFD54F; /* Consistent header colors */
+        }
+        ul {
+            padding-left: 20px;
+        }
+        ul li {
+            margin-bottom: 10px; /* Add spacing between list items */
+        }
         .blog-image-large {
             max-width: 100%;
             height: auto;
+            margin-top: 20px; /* Visual separation from text */
+        }
+        .theme-switch-wrapper {
+            position: absolute;
+            top: 20px;
+            right: 20px;
         }
     </style>
 </head>
 <body>
-    <!-- Emoji container -->
-    <div class="emoji-container">
-        <span class="emoji">👨‍💻</span>
-    </div>
-
     <nav id="main-nav">
         <ul>
             <li><a href="index.html"><i class="fas fa-home"></i> Home</a></li>
@@ -109,9 +80,13 @@
         </ul>
     </nav>
 
+    <div class="emoji-container">
+        
+    </div>
+
     <div class="theme-switch-wrapper">
         <label class="theme-switch" for="theme-toggle">
-            <input type="checkbox" id="theme-toggle" />
+            
             <div class="slider round"></div>
         </label>
     </div>
@@ -119,45 +94,28 @@
     <div class="main-content">
         <section id="blog-post">
             <div class="container">
-                <h2>INE's Ejpt<span class="emoji">👩‍💻</span></h2>
-
-                <!-- Add your content here -->
+                <h2>INE's Ejpt <span class="emoji">👩‍💻</span></h2>
                 <h3>Info and Pricing</h3>
-                <ul>
-                    <img src="images/Into.png" alt="Coding Image" class="blog-image-large">
-                    <p>So for starters, the Ejpt is an up and coming CERT in the industry. I think that there is something to say for exams that are "hands on".</p>
-                    <p>This exam is absolutely perfect in my option for anyone who has been in the industry for maybe a short period of time and really wants to test their ability. It is no secret the the dreaded imposter syndrome haunts many professionals in the community and by taking exams such as this one, I believe it helps to put those types of negative emotions to rest.</p>
-                    <p>INE has worked to develop a v2 edition of this exam which is now just labeled as the Ejpt. The exam itself is open book, and is not proctored. The student has 48 hours to complete the exam which in my opinion is ample time.</p>
-                    <p>Let's take a look at pricing</p>
-                    
-
-                    <p></p>
-
-            
-                <img src="images/Pricing.png" alt="Coding Image" class="blog-image-large">
-                <p> The exam voucher can be purchased for a flat 200 bucks. This is incredibly reasonable and if you have any inclination whatsoever that you need more training before entering the exam then you can pay $299 and purchase the "Skill Dive" package which includes additional training to prepoare for the exam. This option at the time of writing this post also includes an additional exam voucher in the event you go "whoops" on the first take.
-                    <h3>The Exam</h3>
-                    <p>You may see this time and time again while researching this CERT, people say that you can't approach this exam like a CTF... I couldn't agree more. This exam is a pentest, a true blue pentest. As you start the exam, you are provided a box that can be accessed within a browser and you are in a network. You must find all of the active hosts, you must enumerate them, and you must exploit each and every one. The reason you cannot approach this exam as a CTF is for this reason.</p>
-                    <p>If you attack each question as an individual question itself then you will consume your time going down unnecessary rabbit holes. You MUST approach the exam as a pentest and document as you go. I cannot stress this enough! I noticed that the exam will circle back to machines that it touched on previously. For example, my number 2 question was related to a web application that I exploited and the exam didn't touch on that machine again until question 34...</p>
-                    <p>Catch my drift?</p>
-                    <p>It all boils down to documentation. If you are currently a pentester, you know the importance of this and you should follow suit for this exam.</p>
-                    <p></p>
-                    <h3>Grading Schema</h3>
-                    <p>I know this exam was surrounded by its fair share of controversy. After doing any kind of research on this exam, you will come across individuals who scored a 94 or an 88 and still managed to fail the exam even though a 70% is all that is required to pass. Let me explain, the exam is graded overall by grading the performance level of on individual topics such as priv escalation, web application exploitation.. etc..</p>
-                    <p>Without getting too deep into the weeds and the math of the grading system, just know this... If you walk into the exam prepared to conduct a pentest, and you know what you are doing and you have already been successful as a pentester then you are going to pass this exam and pass it with flying colors.</p>
-                    <p>INE gives you 48 hours to complete the exam. I totally expected the exam to take much longer than it actually did. I finished the exam in 6 hours and that time inlcuded eating dinner with my family. There is plenty of time to take the exam.</p>
-
-                    <p>If I had to say there was any downside to the exam at all I would say it is the fact that you cannot download or use any additional tools other than the ones that are provided. This isn't a huge deal but for examply, if you want to use gobuster and ffuf is the only directory discoverig tool you have then you are just left with that option. Not a big deal, but something to be aware of. Absulutely every tool you will need to complete the exam is available.</p>
-
-                    <p>I 10 out of 10 recommend this CERT and I promise you will have a blast taking it!</p>
-                    
-                </p>
-
-                <p></p>
+                <img src="images/Into.png" alt="Intro Image" class="blog-image-large">
+                <p>So for starters, the Ejpt is an up and coming CERT in the industry. I think that there is something to say for exams that are "hands on".</p>
+                <p>This exam is absolutely perfect in my opinion for anyone who has been in the industry for maybe a short period of time and really wants to test their ability. It is no secret that the dreaded imposter syndrome haunts many professionals in the community and by taking exams such as this one, I believe it helps to put those types of negative emotions to rest.</p>
+                <p>INE has worked to develop a v2 edition of this exam which is now just labeled as the Ejpt. The exam itself is open book, and is not proctored. The student has 48 hours to complete the exam which in my opinion is ample time.</p>
+                <p>Let's take a look at pricing:</p>
+                <img src="images/Pricing.png" alt="Pricing Image" class="blog-image-large">
+                <p>The exam voucher can be purchased for a flat 200 bucks. This is incredibly reasonable and if you have any inclination whatsoever that you need more training before entering the exam then you can pay $299 and purchase the "Skill Dive" package which includes additional training to prepare for the exam. This option at the time of writing this post also includes an additional exam voucher in the event you go "whoops" on the first take.</p>
+                <h3>The Exam</h3>
+                <p>You may see this time and time again while researching this CERT, people say that you can't approach this exam like a CTF... I couldn't agree more. This exam is a pentest, a true blue pentest. As you start the exam, you are provided a box that can be accessed within a browser and you are in a network. You must find all of the active hosts, you must enumerate them, and you must exploit each and every one. The reason you cannot approach this exam as a CTF is for this reason.</p>
+                <p>If you attack each question as an individual question itself then you will consume your time going down unnecessary rabbit holes. You MUST approach the exam as a pentest and document as you go. I cannot stress this enough! I noticed that the exam will circle back to machines that it touched on previously. For example, my number 2 question was related to a web application that I exploited and the exam didn't touch on that machine again until question 34...</p>
+                <p>Catch my drift?</p>
+                <p>It all boils down to documentation. If you are currently a pentester, you know the importance of this and you should follow suit for this exam.</p>
+                <h3>Grading Schema</h3>
+                <p>I know this exam was surrounded by its fair share of controversy. After doing any kind of research on this exam, you will come across individuals who scored a 94 or an 88 and still managed to fail the exam even though a 70% is all that is required to pass. Let me explain, the exam is graded overall by grading the performance level of individual topics such as privilege escalation, web application exploitation, etc.</p>
+                <p>Without getting too deep into the weeds and the math of the grading system, just know this... If you walk into the exam prepared to conduct a pentest, and you know what you are doing and you have already been successful as a pentester then you are going to pass this exam and pass it with flying colors.</p>
+                <p>INE gives you 48 hours to complete the exam. I totally expected the exam to take much longer than it actually did. I finished the exam in 6 hours and that time included eating dinner with my family. There is plenty of time to take the exam.</p>
+                <p>If I had to say there was any downside to the exam at all I would say it is the fact that you cannot download or use any additional tools other than the ones that are provided. This isn't a huge deal but for example, if you want to use gobuster and ffuf is the only directory discovering tool you have then you are just left with that option. Not a big deal, but something to be aware of. Absolutely every tool you will need to complete the exam is available.</p>
+                <p>I 10 out of 10 recommend this CERT and I promise you will have a blast taking it!</p>
             </div>
         </section>
     </div>
-
-    <!-- ... (rest of your body content) ... -->
 </body>
 </html>
