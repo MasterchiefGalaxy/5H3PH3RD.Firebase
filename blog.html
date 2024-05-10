@@ -29,7 +29,6 @@
             background: rgba(0, 0, 0, 0.2);
             border-radius: 20px;
             margin-top: 20px;
-            flex-wrap: wrap; /* Allows nav items to wrap in small screens */
         }
         #main-nav ul li a {
             color: #ffffff;
@@ -80,15 +79,6 @@
         }
         .mantine-button:hover {
             background: #ffb300;
-        }
-        /* Media Query for Mobile Devices */
-        @media (max-width: 600px) {
-            .container {
-                grid-template-columns: 1fr; /* Makes the grid one column on small screens */
-            }
-            #main-nav ul {
-                flex-direction: column; /* Stack nav items vertically on smaller screens */
-            }
         }
     </style>
 </head>
