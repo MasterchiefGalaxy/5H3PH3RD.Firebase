@@ -80,6 +80,16 @@
         .mantine-button:hover {
             background: #ffb300;
         }
+        /* Adjustments for mobile */
+        @media (max-width: 600px) {
+            #main-nav ul {
+                flex-direction: row; /* Keeps the menu horizontal on small screens */
+                flex-wrap: nowrap; /* Prevents wrapping */
+            }
+            .container {
+                grid-template-columns: 1fr; /* Stacks the blog posts vertically */
+            }
+        }
     </style>
 </head>
 <body>
