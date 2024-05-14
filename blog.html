@@ -3,6 +3,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Content-Security-Policy" content="
+    default-src 'self';
+    script-src 'self' https://cdnjs.cloudflare.com;
+    style-src 'self' https://fonts.googleapis.com https://cdnjs.cloudflare.com 'unsafe-inline';
+    font-src 'self' https://fonts.gstatic.com https://cdnjs.cloudflare.com;
+    img-src 'self' data:;
+    connect-src 'self';
+    frame-src 'none';
+    ">
     <title>5H3PH3RD - Blog</title>
     <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
@@ -14,24 +23,39 @@
             font-family: 'Poppins', sans-serif;
             margin: 0;
             padding: 0;
-            background: linear-gradient(to right bottom, #4a148c, #6a1b9a);
-            color: #fff;
+            background: #121212; /* Dark background */
+            color: #00ff99; /* Neon green text color */
             display: flex;
             flex-direction: column;
             align-items: center;
             min-height: 100vh;
+            overflow: hidden; /* To ensure the video covers the entire background */
+        }
+        #background-video {
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            min-width: 100%;
+            min-height: 100%;
+            width: auto;
+            height: auto;
+            z-index: -1;
+            transform: translate(-50%, -50%);
+            background-size: cover;
         }
         #main-nav ul {
             list-style-type: none;
             padding: 0;
             display: flex;
             justify-content: center;
-            background: rgba(0, 0, 0, 0.2);
+            background: rgba(0, 0, 0, 0.7);
             border-radius: 20px;
             margin-top: 20px;
+            padding: 10px 20px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
         }
         #main-nav ul li a {
-            color: #ffffff;
+            color: #00ff99;
             text-decoration: none;
             font-weight: bold;
             font-size: 16px;
@@ -39,25 +63,29 @@
             transition: color 0.3s ease;
         }
         #main-nav ul li a:hover, #main-nav ul li a:focus {
-            color: #FFD54F; /* Yellow color on hover */
+            color: #ff0066; /* Pink color on hover */
         }
         .container {
             width: 100%; /* Takes the width of the device */
             max-width: 960px; /* Maximum width */
             padding: 20px;
             margin: 20px auto; /* Centers the container */
-            background: rgba(255, 255, 255, 0.1);
+            background: rgba(30, 30, 30, 0.8); /* Semi-transparent container background */
             border-radius: 15px;
             display: grid;
             grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); /* Makes grid responsive */
             gap: 20px;
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.5);
         }
         .blog-post {
-            background: rgba(0, 0, 0, 0.3);
+            background: rgba(0, 0, 0, 0.7);
             border-radius: 10px;
             padding: 20px;
             box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
             transition: transform 0.3s ease;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
         }
         .blog-post:hover {
             transform: translateY(-5px);
@@ -67,18 +95,19 @@
             border-radius: 5px;
         }
         .mantine-button-container {
-            margin-top: 10px;
+            margin-top: auto; /* Push the button to the bottom */
         }
         .mantine-button {
-            background: #FFD54F;
+            background: #ff0066;
             color: #000;
             text-decoration: none;
             padding: 8px 16px;
             border-radius: 5px;
             display: inline-block;
+            transition: background 0.3s ease;
         }
         .mantine-button:hover {
-            background: #ffb300;
+            background: #ff3399;
         }
         /* Adjustments for mobile */
         @media (max-width: 600px) {
@@ -93,6 +122,10 @@
     </style>
 </head>
 <body>
+    <video autoplay muted loop id="background-video">
+        <source src="images/galaxy.mp4" type="video/mp4">
+        Your browser does not support HTML5 video.
+    </video>
     <nav id="main-nav">
         <ul>
             <li><a href="index.html"><i class="fas fa-home"></i> Home</a></li>

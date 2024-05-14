@@ -23,26 +23,39 @@
             font-family: 'Poppins', sans-serif;
             margin: 0;
             padding: 0;
-            background: #121212; /* Dark background for contrast */
-            color: #ffffff; /* White text color for readability */
+            background: #121212; /* Dark background */
+            color: #00ff99; /* Neon green text color */
             display: flex;
             flex-direction: column;
             align-items: center;
             justify-content: center;
             min-height: 100vh;
-            background-image: linear-gradient(to right bottom, #4a148c, #6a1b9a);
+            overflow: hidden; /* To ensure the video covers the entire background */
+        }
+        #background-video {
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            min-width: 100%;
+            min-height: 100%;
+            width: auto;
+            height: auto;
+            z-index: -1;
+            transform: translate(-50%, -50%);
+            background-size: cover;
         }
         #main-nav ul {
             list-style-type: none;
             padding: 0;
             display: flex;
-            background: rgba(0, 0, 0, 0.2);
+            background: rgba(0, 0, 0, 0.7);
             padding: 10px 20px;
-            border-radius: 20px;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+            margin-bottom: 20px; /* Space for the terminal */
         }
         #main-nav ul li a {
-            color: #ffffff;
+            color: #00ff99;
             text-decoration: none;
             font-weight: bold;
             font-size: 16px;
@@ -50,24 +63,25 @@
             transition: color 0.3s ease, transform 0.3s ease;
         }
         #main-nav ul li a:hover, #main-nav ul li a:focus {
-            color: #FFD54F; /* Yellow color on hover */
+            color: #ff0066; /* Pink color on hover */
             transform: translateY(-2px);
         }
         .container {
             text-align: center;
             padding: 20px;
             max-width: 600px;
-            background: rgba(255, 255, 255, 0.1);
-            border-radius: 15px;
-            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+            background: rgba(30, 30, 30, 0.8); /* Semi-transparent container background */
+            border-radius: 10px;
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.5);
         }
         h2 {
             font-size: 2.5rem;
-            color: #FFD54F; /* Stylish yellow for headers */
+            color: #ff0066; /* Neon pink for headers */
+            animation: flicker 3s infinite alternate;
         }
         p {
             line-height: 1.6;
-            color: #BDBDBD; /* Light grey for paragraphs */
+            color: #b0b0b0; /* Light grey for paragraphs */
         }
         .github-link img {
             height: 48px; /* Larger GitHub logo */
@@ -82,11 +96,62 @@
             right: 20px;
         }
         .slider.round {
-            background-color: #FFF176; /* Light yellow slider */
+            background-color: #ff0066; /* Neon pink slider */
+        }
+        .cube {
+            position: relative;
+            width: 100px;
+            transform-style: preserve-3d;
+            transform: rotateX(0deg) rotateY(0deg);
+            animation: rotate 5s infinite linear;
+        }
+        .cube-face {
+            position: absolute;
+            width: 100px;
+            height: 100px;
+            background: rgba(30, 30, 30, 0.9);
+            color: #00ff99;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            border: 2px solid #ff0066;
+        }
+        .cube-face.front  { transform: translateZ(50px); }
+        .cube-face.back   { transform: rotateY(180deg) translateZ(50px); }
+        .cube-face.right  { transform: rotateY(90deg) translateZ(50px); }
+        .cube-face.left   { transform: rotateY(-90deg) translateZ(50px); }
+        .cube-face.top    { transform: rotateX(90deg) translateZ(50px); }
+        .cube-face.bottom { transform: rotateX(-90deg) translateZ(50px); }
+        @keyframes rotate {
+            from { transform: rotateX(0deg) rotateY(0deg); }
+            to { transform: rotateX(360deg) rotateY(360deg); }
+        }
+        @keyframes flicker {
+            0%, 18%, 22%, 25%, 53%, 57%, 100% {
+                text-shadow: 
+                    0 0 4px #ff0066,
+                    0 0 11px #ff0066,
+                    0 0 19px #ff0066,
+                    0 0 40px #ff0066,
+                    0 0 80px #ff0066,
+                    0 0 90px #ff0066,
+                    0 0 100px #ff0066,
+                    0 0 150px #ff0066;
+                opacity: 1;
+            }
+            20%, 24%, 55% {        
+                text-shadow: none;
+                opacity: 0.8;
+            }
         }
     </style>
 </head>
 <body>
+    <video autoplay muted loop id="background-video">
+        <source src="images/galaxy.mp4" type="video/mp4">
+        Your browser does not support HTML5 video.
+    </video>
     <nav id="main-nav">
         <ul>
             <li><a href="index.html"><i class="fas fa-home"></i> Home</a></li>
@@ -94,13 +159,13 @@
             <li><a href="contact.html"><i class="fas fa-desktop"></i> Contact</a></li>
         </ul>
     </nav>
-    <div class="emoji-container">
-        <span style="font-size: 3rem;">👨‍💻</span> <!-- Hacker emoji -->
-    </div>
-    <div class="theme-switch-wrapper">
-        <label class="theme-switch" for="theme-toggle">
-            <div class="slider round"></div>
-        </label>
+    <div class="cube">
+        <div class="cube-face front">W</div>
+        <div class="cube-face back">E</div>
+        <div class="cube-face right">L</div>
+        <div class="cube-face left">C</div>
+        <div class="cube-face top">O</div>
+        <div class="cube-face bottom">M</div>
     </div>
     <div class="main-content">
         <section id="about">
@@ -117,7 +182,5 @@
             </div>
         </section>
     </div>
-    <!-- JavaScript File -->
-    <script src="dist/app.js"></script>
 </body>
 </html>
