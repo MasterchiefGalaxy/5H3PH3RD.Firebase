@@ -46,6 +46,10 @@
             margin-top: 20px;
             padding: 10px 20px;
             box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+            flex-wrap: wrap; /* Allows the menu to wrap on small screens */
+        }
+        #main-nav ul li {
+            margin: 5px 10px; /* Adds spacing between menu items */
         }
         #main-nav ul li a {
             color: #00ff99;
@@ -105,7 +109,7 @@
         /* Adjustments for mobile */
         @media (max-width: 600px) {
             #main-nav ul {
-                flex-direction: column; /* Stack menu items vertically on small screens */
+                justify-content: space-around; /* Distribute menu items evenly */
             }
             .container {
                 grid-template-columns: 1fr; /* Stacks the blog posts vertically */
