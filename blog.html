@@ -40,16 +40,15 @@
             list-style-type: none;
             padding: 0;
             display: flex;
-            justify-content: center;
+            justify-content: space-around;
             background: rgba(0, 0, 0, 0.7);
             border-radius: 20px;
             margin-top: 20px;
             padding: 10px 20px;
             box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
-            flex-wrap: wrap; /* Allows the menu to wrap on small screens */
         }
         #main-nav ul li {
-            margin: 5px 10px; /* Adds spacing between menu items */
+            margin: 0 10px;
         }
         #main-nav ul li a {
             color: #00ff99;
@@ -109,7 +108,11 @@
         /* Adjustments for mobile */
         @media (max-width: 600px) {
             #main-nav ul {
-                justify-content: space-around; /* Distribute menu items evenly */
+                flex-wrap: wrap; /* Allows wrapping of menu items */
+            }
+            #main-nav ul li {
+                flex: 1 1 100%; /* Each item takes full width on small screens */
+                text-align: center; /* Centers the text in each menu item */
             }
             .container {
                 grid-template-columns: 1fr; /* Stacks the blog posts vertically */
