@@ -25,23 +25,16 @@
             padding: 0;
             background: #121212; /* Dark background */
             color: #00ff99; /* Neon green text color */
-            display: flex;
-            flex-direction: column;
-            align-items: center;
             min-height: 100vh;
-            overflow: hidden; /* To ensure the video covers the entire background */
         }
         #background-video {
             position: fixed;
-            top: 50%;
-            left: 50%;
-            min-width: 100%;
-            min-height: 100%;
-            width: auto;
-            height: auto;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
             z-index: -1;
-            transform: translate(-50%, -50%);
-            background-size: cover;
         }
         #main-nav ul {
             list-style-type: none;
@@ -112,8 +105,7 @@
         /* Adjustments for mobile */
         @media (max-width: 600px) {
             #main-nav ul {
-                flex-direction: row; /* Keeps the menu horizontal on small screens */
-                flex-wrap: nowrap; /* Prevents wrapping */
+                flex-direction: column; /* Stack menu items vertically on small screens */
             }
             .container {
                 grid-template-columns: 1fr; /* Stacks the blog posts vertically */
