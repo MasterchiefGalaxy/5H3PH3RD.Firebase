@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Content-Security-Policy" content="
+    default-src 'self';
+    script-src 'self' https://cdnjs.cloudflare.com;
+    style-src 'self' https://fonts.googleapis.com https://cdnjs.cloudflare.com 'unsafe-inline';
+    font-src 'self' https://fonts.gstatic.com https://cdnjs.cloudflare.com;
+    img-src 'self' data:;
+    connect-src 'self';
+    frame-src 'none';
+    ">
+    <title>5H3PH3RD - Blog Post 4</title>
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <!-- Custom Styles -->
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            margin: 0;
+            padding: 0;
+            background: #121212; /* Dark background */
+            color: #00ff99; /* Neon green text color */
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            min-height: 100vh;
+            overflow-x: hidden; /* Ensure the video covers the entire background */
+        }
+        #background-video {
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            min-width: 100%;
+            min-height: 100%;
+            width: auto;
+            height: auto;
+            z-index: -1;
+            transform: translate(-50%, -50%);
+            background-size: cover;
+        }
+        #main-nav ul {
+            list-style-type: none;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            background: rgba(0, 0, 0, 0.7);
+            border-radius: 20px;
+            margin-top: 20px;
+            padding: 10px 20px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+        }
+        #main-nav ul li a {
+            color: #00ff99;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 16px;
+            padding: 8px 16px;
+            transition: color 0.3s ease;
+        }
+        #main-nav ul li a:hover, #main-nav ul li a:focus {
+            color: #ff0066; /* Pink color on hover */
+        }
+        .container {
+            max-width: 960px;
+            margin: 20px auto;
+            padding: 20px;
+            background: rgba(30, 30, 30, 0.8); /* Semi-transparent container background */
+            border-radius: 15px;
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.5);
+            text-align: left;
+            overflow-y: auto; /* Ensure the container can scroll */
+            max-height: 80vh; /* Prevent container from growing too large */
+        }
+        h2, h3 {
+            color: #ff0066; /* Consistent header colors */
+        }
+        ul {
+            padding-left: 20px;
+        }
+        ul li {
+            margin-bottom: 10px; /* Add spacing between list items */
+        }
+        .blog-image-large {
+            display: block;
+            max-width: 100%;
+            height: auto;
+            margin: 20px auto; /* Center images and add separation from text */
+        }
+        p {
+            line-height: 1.6; /* Improve readability */
+        }
+        .emoji {
+            font-size: 1.5rem; /* Emoji styles */
+        }
+        .theme-switch-wrapper {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+        }
+    </style>
+</head>
+<body>
+    <video autoplay muted loop id="background-video">
+        <source src="images/galaxy.mp4" type="video/mp4">
+        Your browser does not support HTML5 video.
+    </video>
+    <nav id="main-nav">
+        <ul>
+            <li><a href="index.html"><i class="fas fa-home"></i> Home</a></li>
+            <li><a href="blog.html" class="active"><i class="fas fa-user-secret"></i> Blog</a></li>
+            <li><a href="contact.html"><i class="fas fa-desktop"></i> Contact</a></li>
+        </ul>
+    </nav>
+
+    <div class="emoji-container">
+        <span class="emoji"></span>
+    </div>
+
+    <div class="theme-switch-wrapper">
+        <label class="theme-switch" for="theme-toggle">
+            <div class="slider round"></div>
+        </label>
+    </div>
+
+    <div class="main-content">
+        <section id="blog-post">
+            <div class="container">
+                <h2>CEH v12: My Approach <span class="emoji">💻</span></h2>
+                <h3>Initial Impressions</h3>
+                <img src="images/CEH_PIN.png" alt="CEH Pin Logo" class="blog-image-large">
+                <p>After reading countless reviews and seeking out all the information I could find, I have to admit, I was pretty intimidated by the CEH v12 exam. The tales of difficult questions and rigorous content had me on edge. But hey, anything worth having is usually tough to achieve, right?</p>
+                <p>Spend a few minutes researching this exam and you’ll quickly find out it's recognized by the DoD and considered a "MUST HAVE" cert by many cybersecurity pros. So, let's dive into the journey and the prep leading up to it.</p>
+                <p>One thing that caught my eye during preparation was the focus on tools and concepts that felt a bit... vintage. Tools like CEWL (which I hadn’t touched since I first started learning to hack), and a deep dive into PCI compliance which was like a trip down college memory lane!</p>
+                <h3>Best Prep Course</h3>
+                <p>Amidst all the options out there, the Certified Ethical Hacker prep course on Coursera stood out as the MVP. This course gave a comprehensive overview of all the exam topics and boosted my confidence significantly.</p>
+                <img src="images/coursera.png" alt="Coursera CEH Prep Course" class="blog-image-large">
+                <p>Check out the course here: <a href="https://www.coursera.org/specializations/certified-ethical-hacking-v12-cehv12-exam-prep-course">Certified Ethical Hacking v12 (CEHv12) Exam Prep Course</a>.</p>
+                <p>Pro tip: Instead of scouring the web for practice exams or shelling out big bucks for prep courses, sign up for Coursera (it’s about 40 bucks a month), focus on completing the course within their 7-day free trial, and cancel before you're charged. Boom, free prep!</p>
+                <p>A heads-up though, since the CEH isn't hands-on, cramming multiple-choice questions might not be the best strategy. The Coursera course does a great job covering what you need to know.</p>
+                <h3>Exam Experience</h3>
+                <p>Ah, the exam day. They make you sign an NDA, so I can’t spill all the details, but I can tell you it was a mix of unexpected twists and turns. My preparation from Coursera paid off, and I found myself navigating through the questions with a mix of confidence and curiosity.</p>
+                <p>Understanding the emphasis on PCI compliance and some of those legacy tools was a good reminder of the broad spectrum of knowledge you need to know. The reason I am picking on PCI compliance is because
+                    I really was not expecting to dabble in that realm for a cert called "Certified Ethical Hacker"... It sort of doesnt fit the bill.</p>
+                <h3>Conclusion</h3>
+                <p>All in all it is a challenging cert by all means. Not in a technical way but more so in the amount of shear knowledge you must have about so many topics.</p>
+                <p>It is by far not a "fun" type of exam where you get to use all of your fancy cool tools to own a system but none the less it was rewarding to complete.</p>
+            </div>
+        </section>
+    </div>
+</body>
+</html>
